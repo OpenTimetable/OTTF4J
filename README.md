@@ -27,6 +27,7 @@ Please refer to the [Wiki Section][wiki-url].
 2. Add repository
 ```xml
 <repository>
+  <id>github</id>
   <url>https://maven.pkg.github.com/opentimetable/ottf4j</url>
   <snapshots>
     <enabled>true</enabled>
