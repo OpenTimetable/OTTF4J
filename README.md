@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">OTTF4J</h1>
-<h3 align="center">Official OTTF parser and composer for JVM languages.</h3>
+<h3 align="center">OTTF parser and composer for JVM languages.</h3>
 <br>
 
 <div align="center">

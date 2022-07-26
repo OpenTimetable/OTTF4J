@@ -7,7 +7,23 @@
 	<groupId>org.opentimetable</groupId>
 	<artifactId>ottf4j</artifactId>
 	<version>1.0</version>
+
 	<name>OTTF4J</name>
+	<description>OTTF parser and composer for JVM languages.</description>
+	<url>https://github.com/OpenTimetable/OTTF4J</url>
+
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/OpenTimetable/OTTF4J/issues</url>
+	</issueManagement>
+
+	<licenses>
+		<license>
+			<name>MIT license</name>
+			<url>https://github.com/OpenTimetable/OTTF4J/blob/master/LICENSE</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
 
 	<distributionManagement>
 		<repository>
