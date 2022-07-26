@@ -24,6 +24,11 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
+	
+	<scm>
+		<url>https://github.com/OpenTimetable/OTTF4J</url>
+		<connection>scm:git:https://github.com/OpenTimetable/OTTF4J.git</connection>
+	</scm>  
 
 	<distributionManagement>
 		<repository>
