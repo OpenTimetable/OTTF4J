@@ -6,49 +6,51 @@
 
 	<groupId>org.opentimetable</groupId>
 	<artifactId>ottf4j</artifactId>
-	<version>1.0</version>
+	<version>1.1</version>
 
 	<name>OTTF4J</name>
 	<description>OTTF parser and composer for JVM languages.</description>
 	<url>https://github.com/OpenTimetable/OTTF4J</url>
 
-	<issueManagement>
-		<system>GitHub</system>
-		<url>https://github.com/OpenTimetable/OTTF4J/issues</url>
-	</issueManagement>
-
 	<licenses>
 		<license>
-			<name>MIT license</name>
+			<name>MIT License</name>
 			<url>https://github.com/OpenTimetable/OTTF4J/blob/master/LICENSE</url>
-			<distribution>repo</distribution>
 		</license>
 	</licenses>
-	
-	<scm>
-		<url>https://github.com/OpenTimetable/OTTF4J</url>
-		<connection>scm:git:https://github.com/OpenTimetable/OTTF4J.git</connection>
-	</scm>  
 
-	<distributionManagement>
-		<repository>
-			<id>github</id>
-			<name>GitHub OpenTimetable Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/opentimetable/ottf4j</url>
-		</repository>
-	</distributionManagement>
+	<developers>
+		<developer>
+			<name>chocoearly44</name>
+			<email>chocoearly44@proton.me</email>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git://github.com/OpenTimetable/OTTF4J.git</connection>
+		<developerConnection>scm:git:ssh://github.com:OpenTimetable/OTTF4J.git</developerConnection>
+		<url>https://github.com/OpenTimetable/OTTF4J/tree/master</url>
+	</scm>
 
 	<properties>
 		<maven.compiler.source>8</maven.compiler.source>
 		<maven.compiler.target>8</maven.compiler.target>
 	</properties>
 
+	<distributionManagement>
+		<repository>
+			<id>repsy</id>
+			<name>OpenTimetable Maven</name>
+			<url>https://repo.repsy.io/mvn/opentimetable/maven</url>
+		</repository>
+	</distributionManagement>
+
 	<dependencies>
 		<!-- Custom -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-			<version>2.13.3</version>
+			<version>2.14.0</version>
 		</dependency>
 
 		<dependency>
@@ -61,7 +63,7 @@
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter</artifactId>
-			<version>5.8.2</version>
+			<version>5.9.0</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -72,4 +74,38 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.1.2</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.4.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>

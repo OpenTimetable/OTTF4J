@@ -22,20 +22,15 @@ Please refer to the [Wiki Section][wiki-url].
 
 ## Installation
 ### Maven
-1. [Authenticate with GitHub Packages](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry#authenticating-to-github-packages)
-
-2. Add repository
+1. Add repository
 ```xml
 <repository>
-  <id>github</id>
-  <url>https://maven.pkg.github.com/opentimetable/ottf4j</url>
-  <snapshots>
-    <enabled>true</enabled>
-  </snapshots>
+  <id>repsy</id>
+  <url>https://repo.repsy.io/mvn/opentimetable/maven</url>
 </repository>
 ```
 
-3. Add dependency
+2. Add dependency
 ```xml
 <dependency>
   <groupId>org.opentimetable</groupId>
@@ -45,22 +40,16 @@ Please refer to the [Wiki Section][wiki-url].
 ```
 
 ### Gradle
-1. [Authenticate with GitHub Packages](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry#authenticating-to-github-packages)
-
-2. Add repository
+1. Add repository
 ```groovy
 repositories {
   maven {
-    url = uri("https://maven.pkg.github.com/opentimetable/ottf4j")
-    credentials {
-      username = System.getenv("USERNAME")
-      password = System.getenv("TOKEN")
-    }
+    url "https://repo.repsy.io/mvn/opentimetable/maven"
   }
 }
 ```
 
-3. Add dependency
+2. Add dependency
 ```groovy
 dependencies {
   implementation 'org.opentimetable:ottf4j:VERSION'
